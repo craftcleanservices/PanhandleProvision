@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Entry &amp; Delivery Authorization | Panhandle Provision</title>
+  <meta name="description" content="Property owner authorization agreement granting Craft Clean Services, LLC d/b/a Panhandle Provision permission to deliver and stock groceries prior to arrival." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #172A3A;
+      --teal: #2B7A78;
+      --mint: #3AAFA9;
+      --sand: #F4E9CD;
+      --sand-light: #FAF6EC;
+      --white: #FFFFFF;
+      --text-body: #334756;
+      --text-muted: #5C7080;
+      --border-light: #CBD5E1;
+      --shadow-md: 0 12px 30px rgba(23, 42, 58, 0.10);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-body);
+      background-color: var(--sand-light);
+      line-height: 1.65;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--navy);
+      line-height: 1.25;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      background-color: var(--white);
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .nav-wrapper {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo-img {
+      height: 78px;
+      width: auto;
+      display: block;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: var(--teal);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .back-link:hover {
+      color: var(--navy);
+    }
+
+    /* ================= DOCUMENT CARD ================= */
+    .doc-wrapper {
+      padding: 48px 0 72px;
+    }
+
+    .agreement-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border-top: 6px solid var(--teal);
+      padding: 48px;
+    }
+
+    .doc-header {
+      border-bottom: 2px solid var(--sand);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    .doc-eyebrow {
+      display: inline-block;
+      background-color: var(--sand);
+      color: var(--navy);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+
+    .doc-header h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .doc-header p {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+    }
+
+    /* ================= LEGAL TERMS ================= */
+    .legal-terms {
+      background-color: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 36px;
+    }
+
+    .legal-terms h2 {
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .clause {
+      margin-bottom: 16px;
+      font-size: 0.93rem;
+    }
+
+    .clause:last-child {
+      margin-bottom: 0;
+    }
+
+    .clause strong {
+      color: var(--navy);
+    }
+
+    /* ================= FORM STYLES ================= */
+    .form-section-title {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.84rem;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    label span.req {
+      color: #DC2626;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--border-light);
+      border-radius: 8px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--navy);
+      background-color: var(--white);
+      transition: border-color 0.2s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(43, 122, 120, 0.12);
+    }
+
+    .signature-input {
+      font-family: 'Georgia', serif !important;
+      font-style: italic;
+      font-size: 1.15rem !important;
+      background-color: var(--sand-light) !important;
+    }
+
+    .checkbox-box {
+      background-color: var(--sand-light);
+      border: 1.5px solid var(--teal);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .checkbox-box input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 3px;
+      accent-color: var(--teal);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .checkbox-box label {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 0;
+      cursor: pointer;
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 14px 24px;
+      font-size: 0.92rem;
+      letter-spacing: 0.5px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: var(--teal);
+      color: var(--white);
+      flex: 1 1 260px;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--navy);
+    }
+
+    .btn-secondary {
+      background-color: var(--white);
+      color: var(--navy);
+      border: 2px solid var(--navy);
+      flex: 1 1 180px;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--navy);
+      color: var(--white);
+    }
+
+    .status-banner {
+      display: none;
+      margin-top: 20px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      background-color: #ECFDF5;
+      border: 1px solid #10B981;
+      color: #065F46;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .next-step-box {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #E2E8F0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .next-step-box p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background-color: var(--navy);
+      color: #94A3B8;
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.82rem;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    footer a {
+      color: var(--mint);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= PRINT STYLES ================= */
+    @media print {
+      body {
+        background: #FFFFFF;
+      }
+      header, .action-buttons, .next-step-box, footer, .status-banner {
+        display: none !important;
+      }
+      .doc-wrapper {
+        padding: 0;
+      }
+      .agreement-card {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .logo-img {
+        height: 64px;
+      }
+      .agreement-card {
+        padding: 28px 20px;
+      }
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-wrapper">
+      <a href="index.html" aria-label="Panhandle Provision Home">
+        <img 
+          src="logo.png" 
+          alt="Panhandle Provision" 
+          class="logo-img"
+          onerror="if(this.src.endsWith('logo.png')){this.src='logo.jpg';}else{this.style.display='none'; document.getElementById('fallback-logo').style.display='block';}"
+        />
+        <div id="fallback-logo" style="display:none; font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.2rem; color:#172A3A; letter-spacing:1.5px;">
+          PANHANDLE <span style="color:#2B7A78; font-weight:500;">PROVISION</span>
+        </div>
+      </a>
+      <a href="index.html" class="back-link">&larr; Back to Main Page</a>
+    </div>
+  </header>
+
+  <main class="doc-wrapper">
+    <div class="container">
+      <div class="agreement-card">
+        
+        <div class="doc-header">
+          <span class="doc-eyebrow">Homeowner &amp; Property Access Consent</span>
+          <h1>Property Entry &amp; Pre-Arrival Provisioning Authorization Agreement</h1>
+          <p>Executed in favor of <strong>Craft Clean Services, LLC d/b/a Panhandle Provision</strong> (a Florida Limited Liability Company).</p>
+        </div>
+
+        <!-- LEGAL AGREEMENT TERMS -->
+        <div class="legal-terms">
+          <h2>Terms of Authorization &amp; Consent</h2>
+
+          <div class="clause">
+            <strong>1. Grant of Property Access &amp; Scope of Services:</strong> The undersigned Property Owner or Authorized Representative ("Owner") hereby grants <strong>Craft Clean Services, LLC d/b/a Panhandle Provision</strong> ("Provider"), including its employees, officers, and vetted delivery personnel, express permission to enter the residential property identified below solely for the purpose of delivering, unpacking, and stocking pre-ordered groceries, beverages, and household provisions inside the kitchen, refrigerator, freezer, and pantry prior to Owner's arrival (typically between 10:00 AM and 4:00 PM on the scheduled arrival date).
+          </div>
+
+          <div class="clause">
+            <strong>2. Representation of Ownership &amp; Authority:</strong> Owner warrants and represents that they are the legal owner of the subject property (or a duly authorized agent acting with the legal owner's express permission) and possess full legal authority to grant temporary entry and supply door, lockbox, or gate access credentials to Provider.
+          </div>
+
+          <div class="clause">
+            <strong>3. Security, Access Credentials &amp; Photo Verification:</strong> Provider agrees to treat all keypad codes, lockbox combinations, and entry instructions as strictly confidential and to use them exclusively to fulfill scheduled provisioning orders. Upon completing in-home stocking, Provider will capture time-stamped verification photographs of the stocked kitchen/refrigerator and ensure all exterior doors and entry points are securely locked upon departure.
+          </div>
+
+          <div class="clause">
+            <strong>4. Compliance with Florida Alcohol Laws:</strong> In strict compliance with Florida law, Provider does not deliver, place, or leave alcoholic beverages unattended inside an unoccupied residence. Only non-alcoholic groceries, beverages, household supplies, and non-alcoholic mixer kits will be delivered and stocked prior to Owner's arrival.
+          </div>
+
+          <div class="clause">
+            <strong>5. Insurance, Care &amp; Limitation of Liability:</strong> Craft Clean Services, LLC d/b/a Panhandle Provision maintains active Commercial General Liability insurance covering its in-home delivery and stocking operations. Provider shall exercise reasonable care while inside the residence. Owner agrees to release, indemnify, and hold harmless Craft Clean Services, LLC d/b/a Panhandle Provision from any claims, losses, or damages resulting from pre-existing property conditions, faulty locks or security systems, refrigerator or appliance malfunctions, power outages, or inaccurate access credentials provided by Owner.
+          </div>
+
+          <div class="clause">
+            <strong>6. Effective Period &amp; Revocation:</strong> This authorization applies to the arrival date specified below and any subsequent orders placed by Owner with Provider, unless revoked by Owner in writing prior to order dispatch.
+          </div>
+        </div>
+
+        <!-- INTERACTIVE SIGN-OFF FORM -->
+        <form id="auth-form" onsubmit="handleAgreementSubmit(event)">
+          <h3 class="form-section-title">Property &amp; Authorization Details</h3>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="ownerName">Property Owner / Authorized Signer Full Name <span class="req">*</span></label>
+              <input type="text" id="ownerName" name="ownerName" placeholder="e.g., Jane Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="ownerEmail">Email Address <span class="req">*</span></label>
+              <input type="email" id="ownerEmail" name="ownerEmail" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="ownerPhone">Mobile Phone Number <span class="req">*</span></label>
+              <input type="tel" id="ownerPhone" name="ownerPhone" placeholder="(555) 123-4567" required />
+            </div>
+
+            <div class="form-group">
+              <label for="arrivalDate">Scheduled Arrival / Delivery Date <span class="req">*</span></label>
+              <input type="date" id="arrivalDate" name="arrivalDate" required />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="propertyAddress">Vacation Property Street Address (City, FL, ZIP) <span class="req">*</span></label>
+              <input type="text" id="propertyAddress" name="propertyAddress" placeholder="e.g., 123 Cape San Blas Rd, Port St. Joe, FL 32456" required />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="accessInstructions">Entry Method &amp; Door / Gate / Lockbox Code <span class="req">*</span></label>
+              <input type="text" id="accessInstructions" name="accessInstructions" placeholder="e.g., Front door keypad code: 4829# (or 'Will provide via text 24 hrs prior')" required />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="specialNotes">Special Kitchen, Alarm, or Property Notes (Optional)</label>
+              <textarea id="specialNotes" name="specialNotes" rows="3" placeholder="e.g., Garage fridge available for extra drinks, alarm is off, lock bottom deadbolt upon exit."></textarea>
+            </div>
+          </div>
+
+          <div class="checkbox-box">
+            <input type="checkbox" id="consentCheck" required />
+            <label for="consentCheck">
+              I have read and agree to the Terms of Authorization above. I confirm that I am the legal owner (or authorized agent) of the property listed above and grant <strong>Craft Clean Services, LLC d/b/a Panhandle Provision</strong> permission to enter and deliver/stock goods prior to my arrival.
+            </label>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="signature">Electronic Signature (Type Full Legal Name) <span class="req">*</span></label>
+              <input type="text" id="signature" name="signature" class="signature-input" placeholder="Type your full legal name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="signedDate">Date Signed <span class="req">*</span></label>
+              <input type="date" id="signedDate" name="signedDate" required />
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button type="submit" class="btn btn-primary">Sign &amp; Send Authorization via Email</button>
+            <button type="button" class="btn btn-secondary" onclick="copySignedAgreement()">Copy Signed Agreement</button>
+            <button type="button" class="btn btn-secondary" onclick="window.print()">Print / Save PDF</button>
+          </div>
+
+          <div id="status-banner" class="status-banner"></div>
+        </form>
+
+        <div class="next-step-box">
+          <p><strong>Already completed your permission form?</strong> Head to our storefront to build your grocery order.</p>
+          <a href="https://shop.aisle8.co/biz/tet6zvO9XnpUuxprYsuJ" class="btn btn-primary" style="flex: 0 0 auto;" target="_blank" rel="noopener">Proceed to Storefront &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Craft Clean Services, LLC d/b/a Panhandle Provision &bull; www.panhandleprovision.com &bull; <a href="mailto:panhandleprovision@gmail.com">panhandleprovision@gmail.com</a>
+  </footer>
+
+  <script>
+    // Auto-fill today's date in the Date Signed field
+    document.addEventListener('DOMContentLoaded', function() {
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('signedDate').value = today;
+    });
+
+    function buildSignedSummary() {
+      const ownerName = document.getElementById('ownerName').value.trim();
+      const ownerEmail = document.getElementById('ownerEmail').value.trim();
+      const ownerPhone = document.getElementById('ownerPhone').value.trim();
+      const arrivalDate = document.getElementById('arrivalDate').value;
+      const propertyAddress = document.getElementById('propertyAddress').value.trim();
+      const accessInstructions = document.getElementById('accessInstructions').value.trim();
+      const specialNotes = document.getElementById('specialNotes').value.trim() || 'None';
+      const signature = document.getElementById('signature').value.trim();
+      const signedDate = document.getElementById('signedDate').value;
+
+      return `PROPERTY ENTRY & PRE-ARRIVAL PROVISIONING AUTHORIZATION AGREEMENT
+Entity Authorized: Craft Clean Services, LLC d/b/a Panhandle Provision
+
+Property Owner / Authorized Signer: ${ownerName}
+Email: ${ownerEmail}
+Phone: ${ownerPhone}
+Property Address: ${propertyAddress}
+Scheduled Arrival / Delivery Date: ${arrivalDate}
+Entry / Access Instructions: ${accessInstructions}
+Special Instructions: ${specialNotes}
+
+CONSENT & ELECTRONIC SIGNATURE:
+I confirm that I am the legal owner (or authorized agent) of the property listed above and grant Craft Clean Services, LLC d/b/a Panhandle Provision permission to enter the premises and deliver/stock groceries and provisions prior to my arrival under the terms posted at www.panhandleprovision.com/permission.html.
+
+Electronic Signature: /s/ ${signature}
+Date Signed: ${signedDate}`;
+    }
+
+    function handleAgreementSubmit(event) {
+      event.preventDefault();
+      const summary = buildSignedSummary();
+      const propertyAddress = document.getElementById('propertyAddress').value.trim();
+      const arrivalDate = document.getElementById('arrivalDate').value;
+
+      const businessEmail = "panhandleprovision@gmail.com";
+      const subject = encodeURIComponent(`Property Access Authorization - ${propertyAddress} (${arrivalDate})`);
+      const body = encodeURIComponent(summary);
+
+      const banner = document.getElementById('status-banner');
+      banner.style.display = 'block';
+      banner.innerHTML = 'Your email app is opening with your signed authorization ready to send to <strong>' + businessEmail + '</strong>. You can also click <em>Print / Save PDF</em> to keep a copy for your records.';
+
+      window.location.href = `mailto:${businessEmail}?subject=${subject}&body=${body}`;
+    }
+
+    function copySignedAgreement() {
+      const form = document.getElementById('auth-form');
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      const summary = buildSignedSummary();
+      navigator.clipboard.writeText(summary).then(function() {
+        const banner = document.getElementById('status-banner');
+        banner.style.display = 'block';
+        banner.innerHTML = 'Signed authorization copied to your clipboard! You can paste it directly into an email to <strong>panhandleprovision@gmail.com</strong>.';
+      });
+    }
+  </script>
+</body>
+</html>
