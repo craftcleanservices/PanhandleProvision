@@ -89,7 +89,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 24px;
     }
 
     .nav-links a {
@@ -97,8 +97,8 @@
       color: var(--navy);
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
+      font-size: 0.88rem;
+      letter-spacing: 0.4px;
       transition: color 0.2s ease;
     }
 
@@ -154,6 +154,18 @@
     .btn-mint:hover {
       background-color: var(--sand);
       transform: translateY(-2px);
+    }
+
+    .btn-outline-light {
+      background-color: transparent;
+      color: var(--white) !important;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .btn-outline-light:hover {
+      background-color: var(--white);
+      color: var(--navy) !important;
+      border-color: var(--white);
     }
 
     .btn-sm {
@@ -561,12 +573,99 @@
       color: var(--text-body);
     }
 
+    /* ================= PROPERTY MANAGEMENT PARTNER SECTION ================= */
+    .pm-section {
+      background-color: var(--sand-light);
+      border-top: 1px solid rgba(23, 42, 58, 0.08);
+    }
+
+    .pm-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #1F3A50 100%);
+      border-radius: 16px;
+      padding: 48px 44px;
+      box-shadow: var(--shadow-md);
+      border-left: 8px solid var(--mint);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 40px;
+      align-items: center;
+      color: var(--white);
+    }
+
+    .pm-badge {
+      display: inline-block;
+      background-color: rgba(58, 175, 169, 0.2);
+      color: var(--sand);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+    }
+
+    .pm-banner h2 {
+      color: var(--white);
+      font-size: 1.95rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .pm-banner p {
+      color: #E2E8F0;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .pm-perks {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 20px;
+    }
+
+    .pm-perks li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 0.9rem;
+      color: var(--sand);
+      font-weight: 600;
+    }
+
+    .pm-perks li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--mint);
+      font-weight: 800;
+    }
+
+    .pm-cta-box {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 12px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .pm-cta-box p {
+      font-size: 0.86rem;
+      color: #CBD5E1;
+      margin-bottom: 4px;
+    }
+
     /* ================= FOOTER ================= */
     footer {
       background-color: var(--navy);
       color: var(--white);
       padding: 64px 0 36px;
       text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     footer h2 {
@@ -612,7 +711,8 @@
     /* ================= RESPONSIVE ================= */
     @media (max-width: 960px) {
       .hero-grid,
-      .access-grid {
+      .access-grid,
+      .pm-banner {
         grid-template-columns: 1fr;
       }
 
@@ -623,9 +723,13 @@
       .hero h1 {
         font-size: 2.2rem;
       }
+
+      .pm-banner {
+        padding: 36px 28px;
+      }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
       .logo-img {
         height: 66px;
       }
@@ -635,7 +739,8 @@
       }
 
       .steps-grid,
-      .pricing-grid {
+      .pricing-grid,
+      .pm-perks {
         grid-template-columns: 1fr;
       }
 
@@ -660,7 +765,6 @@
   <header>
     <div class="container nav-wrapper">
       <a href="index.html" class="logo-link" aria-label="Panhandle Provision Home">
-        <!-- Save your uploaded logo as logo.png (or logo.jpg) in the same folder as index.html -->
         <img 
           src="logo.png" 
           alt="Panhandle Provision - Premium Grocery Concierge" 
@@ -676,6 +780,7 @@
         <a href="#how-it-works">How It Works</a>
         <a href="#independent-rentals">Property Access</a>
         <a href="#pricing">Pricing</a>
+        <a href="#property-managers">Property Managers</a>
         <a href="https://shop.aisle8.co/biz/tet6zvO9XnpUuxprYsuJ" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Shop Storefront</a>
       </nav>
     </div>
@@ -697,7 +802,6 @@
       </div>
 
       <div class="hero-image-card">
-        <!-- Save the stocked fridge photo as stocked-fridge.jpg in the same folder as index.html -->
         <img 
           src="stocked-fridge.jpg" 
           alt="Vacation rental refrigerator neatly stocked with cold drinks and fresh groceries"
@@ -826,6 +930,33 @@
           <div class="price-label">Concierge Service Markup</div>
           <div class="price-figure">30% <span>on goods</span></div>
           <p>Covers professional order coordination, staging, and meticulous in-home fridge and pantry stocking before you arrive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROPERTY MANAGEMENT PARTNERS ================= -->
+  <section id="property-managers" class="pm-section">
+    <div class="container">
+      <div class="pm-banner">
+        <div>
+          <span class="pm-badge">For Vacation Rental Property Managers</span>
+          <h2>Partner With Panhandle Provision</h2>
+          <p>Offer white-glove pre-arrival grocery stocking to your incoming guests at <strong>zero cost</strong> and <strong>zero operational workload</strong> for your team across Port St. Joe, Cape San Blas, and Mexico Beach.</p>
+          <ul class="pm-perks">
+            <li>Welcome Email Booking Link</li>
+            <li>10:00 AM – 4:00 PM Turnover Window</li>
+            <li>$1M/$2M General Liability &amp; COI</li>
+            <li>Time-Stamped Photo Verification</li>
+            <li>Strict Vendor Keypad Security</li>
+            <li>100% FL Alcohol-Law Compliant</li>
+          </ul>
+        </div>
+
+        <div class="pm-cta-box">
+          <p>Review our Master Vendor &amp; Access Agreement or request our e-signature onboarding packet and Certificate of Insurance (COI):</p>
+          <a href="pm-partner.html" class="btn btn-mint" style="width:100%;">Property Manager Portal &amp; Agreement &rarr;</a>
+          <a href="mailto:panhandleprovision@gmail.com?subject=Property%20Management%20Partner%20Onboarding%20%26%20COI%20Request&body=Hi%20Micah%2C%0A%0AWe%20manage%20vacation%20rentals%20on%20the%20Forgotten%20Coast%20and%20would%20like%20to%20receive%20your%20Master%20Vendor%20%26%20Access%20Agreement%20for%20e-signature%20along%20with%20your%20Certificate%20of%20Insurance%20(COI).%0A%0AManagement%20Company%3A%20%0AContact%20Name%20%26%20Title%3A%20%0APhone%20Number%3A%20%0AApproximate%20Unit%20Count%3A%20" class="btn btn-outline-light" style="width:100%;">Request E-Signature PDF &amp; COI</a>
         </div>
       </div>
     </div>
